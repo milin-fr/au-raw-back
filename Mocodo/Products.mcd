@@ -1,0 +1,14 @@
+SELLS_BY, 01 PRODUCT, 0N UNIT
+UNIT: unit_id, title
+HAS, 0N TAG, 0N PRODUCT
+TAG: tag_id, title
+
+INCLUDES, 0N PRODUCT, 0N ALLERGEN
+PRODUCT: product_id, title
+CONTAINS, 0N PRODUCT, 0N INGREDIENT
+INGREDIENT: ingredient_id, title
+
+ALLERGEN: allergen_id, title
+BELONGS, 0N PRODUCT, 01 PICTURE
+PICTURE: picture_id, title
+:

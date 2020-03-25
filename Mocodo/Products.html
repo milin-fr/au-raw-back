@@ -1,0 +1,71 @@
+<html>
+<head>
+<meta charset='utf-8'>
+<style>
+  #mld .relation { font-variant: small-caps; font-weight: bold }
+  #mld .primary { text-decoration: underline }
+  #mld .foreign { font-style: oblique }
+  #mld .normal { }
+</style>
+</head>
+<body>
+<div id='mld'>
+<div>
+  <span class='relation'>UNIT</span> (
+    <span class='primary'>unit_id</span>,
+    <span class='normal'>title</span>
+  )
+</div>
+<div>
+  <span class='relation'>HAS</span> (
+    <span class='foreign primary'>tag_id</span>,
+    <span class='foreign primary'>product_id</span>
+  )
+</div>
+<div>
+  <span class='relation'>TAG</span> (
+    <span class='primary'>tag_id</span>,
+    <span class='normal'>title</span>
+  )
+</div>
+<div>
+  <span class='relation'>INCLUDES</span> (
+    <span class='foreign primary'>product_id</span>,
+    <span class='foreign primary'>allergen_id</span>
+  )
+</div>
+<div>
+  <span class='relation'>PRODUCT</span> (
+    <span class='primary'>product_id</span>,
+    <span class='normal'>title</span>,
+    <span class='foreign'>unit_id</span>
+  )
+</div>
+<div>
+  <span class='relation'>CONTAINS</span> (
+    <span class='foreign primary'>product_id</span>,
+    <span class='foreign primary'>ingredient_id</span>
+  )
+</div>
+<div>
+  <span class='relation'>INGREDIENT</span> (
+    <span class='primary'>ingredient_id</span>,
+    <span class='normal'>title</span>
+  )
+</div>
+<div>
+  <span class='relation'>ALLERGEN</span> (
+    <span class='primary'>allergen_id</span>,
+    <span class='normal'>title</span>
+  )
+</div>
+<div>
+  <span class='relation'>PICTURE</span> (
+    <span class='primary'>picture_id</span>,
+    <span class='normal'>title</span>,
+    <span class='foreign'>product_id</span>
+  )
+</div>
+</div>
+</body>
+</html>

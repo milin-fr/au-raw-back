@@ -1,0 +1,50 @@
+product
+- id
+- title
+- tag(s)
+- picture(s)
+- short description
+- long description
+- ingredient(s)
+- price
+- unit
+- allergens
+- archived(0/1)
+- created_at
+- updated_at
+
+tag
+- id
+- title
+- archived(0/1)
+- created_at
+- updated_at
+
+picture
+- id
+- alt
+- img_source
+- archived(0/1)
+- created_at
+- updated_at
+
+ingredient
+- id
+- title
+- archived(0/1)
+- created_at
+- updated_at
+
+unit
+- id
+- title
+- archived(0/1)
+- created_at
+- updated_at
+
+allergen
+- id
+- title
+- archived(0/1)
+- created_at
+- updated_at
