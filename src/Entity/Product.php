@@ -54,27 +54,27 @@ class Product
     private $updated_at;
 
     /**
-     * @ORM\ManyToMany(targetEntity="App\Entity\tag", inversedBy="products")
+     * @ORM\ManyToMany(targetEntity="App\Entity\Tag", inversedBy="products")
      */
     private $tags;
 
     /**
-     * @ORM\OneToMany(targetEntity="App\Entity\picture", mappedBy="product")
+     * @ORM\OneToMany(targetEntity="App\Entity\Picture", mappedBy="product")
      */
     private $pictures;
 
     /**
-     * @ORM\ManyToMany(targetEntity="App\Entity\ingredient", inversedBy="products")
+     * @ORM\ManyToMany(targetEntity="App\Entity\Ingredient", inversedBy="products")
      */
     private $ingredients;
 
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\unit")
+     * @ORM\ManyToOne(targetEntity="App\Entity\Unit")
      */
     private $unit;
 
     /**
-     * @ORM\ManyToMany(targetEntity="App\Entity\allergen", inversedBy="products")
+     * @ORM\ManyToMany(targetEntity="App\Entity\Allergen", inversedBy="products")
      */
     private $allergens;
 
