@@ -1,12 +1,65 @@
 <!DOCTYPE html>
+<html lang="en">
 <html>
     <head>
+    <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title %}{% endblock %}</title>
+        {% block stylesheets %}
+            <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+            <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        {% endblock %}
     </head>
     <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-    </body>
+    <div class="page__container">
+        <header>
+            <div class="header-image">
+            <!-- <img src="assets/au-raw_logo.png" alt="logo">-->
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="cakes.html">Cakes</a></li>
+                    <li><a href="chocolates.html">Chocolates</a></li>
+                    <li><a href="contact-us.html">Contact Us</a></li>
+                </ul>
+                <div class="wrap">
+                    <div class="search">
+                      <input type="text" class="searchTerm" placeholder="e.g. Zebra Cake">
+                      <button type="submit" class="searchButton">
+                      <i class="fa fa-search"></i>
+                      </button>
+                    </div>
+                  </div>
+            </nav>
+
+        </header>   
+            <div class="main-part__container">
+
+                {% block body %}{% endblock %}
+
+            </div>
+        <footer>
+           <ul>
+               <li><a href="about-us.html">About Us</a></li>
+               <li><a href="contact-us.html">Contact Us</a></li>
+               <li><a href="faq.html">FAQ</a></li>
+               <li><a href="legal.html">Legal Mentions</a></li>
+               <li><a href="delivery.html">Delivery</a></li>
+               <li><a href="payment.html">Payment</a></li>
+           </ul>
+           <div class="contact">
+                   <p>1, rue Néant, 75000 Paris</p>
+                   <p>+33 6 00 00 00</p>
+               </div>
+           <div class="copyright">
+
+               <p><section id="copy">&copy;</section>&nbsp;2020&nbsp;<section id="dark-green">Au'Ra</section><section id="green">w</section>&nbsp;- Raw Desserts Shop</p>
+           </div>
+        </footer>
+    </div>
+{% block javascripts %}{% endblock %}
+</body>
 </html>
