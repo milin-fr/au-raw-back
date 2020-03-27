@@ -71,4 +71,22 @@ class MainController extends AbstractController
         return $this->render('main\payment.html.twig', [
         ]);
     }
+
+    /**
+     * @Route("/cakes", name="cakes")
+     */
+    public function cakes()
+    {
+        return $this->render('main\cakes.html.twig', [
+        ]);
+    }
+
+    /**
+     * @Route("/chocolates", name="chocolates")
+     */
+    public function chocolates()
+    {
+        return $this->render('main\chocolates.html.twig', [
+        ]);
+    }
 }
