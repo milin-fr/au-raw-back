@@ -1,0 +1,54 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ product.title }}{% endblock %}
+
+{% block body %}
+
+<div class="product__container">
+            <div class="product__top">
+                <div class="product-image">
+                    <img src="{{ asset('asset/assets/Product-pictures/raw-chocolate-berry-truffles-vegan.jpg') }}">
+                </div>
+                <div class="product-info">
+                    <h1>{{ product.title }}</h1>
+                    <div class="product-tags">
+                    <ul class="tags">
+                        {% for tag in product.tags %}
+                            <li><a href="#" class="tag">{{ tag.title }}</a></li>
+                        {% endfor %}
+                    </ul>
+                    <div class="product-ingr">
+                        
+                        <div id="ingr">
+                            <p>Ingredients:</p>
+                            <ul>
+                                {% for ingredient in product.ingredients %}
+                                <li>{{ ingredient.title }}</li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                        <div class="product-details">
+                        <p id="product-price">{{ product.price }} &euro;</p><em> {{ product.unit.title }}</em>
+                        </div>
+                    </div>
+                    <div class="order"><h4>You can order this product by <a href="{{ path('contact_us') }}">sending us a message</a>, giving us a call, or dropping by our shop in Paris!</h4>
+                    </div>
+                </div>
+                </div>
+                
+            </div>
+
+            <div class="product__bottom">
+                <div class="product-description">
+                    <p>{{ product.longDescription }}</p>
+                    <h3>Allergens:</h3>
+                    <ul>
+                        {% for allergen in product.allergens %}
+                            <li>{{ allergen.title }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+{% endblock %}
