@@ -1,5 +1,5 @@
 html {
-    background: url('assets/berries-bowl-bowl-of-fruit-close-up-1145977.jpg') no-repeat center fixed;
+    background: url('../asset/assets/berries-bowl-bowl-of-fruit-close-up-1145977.jpg') no-repeat center fixed;
     background-size: cover;
     font-family: 'Poppins', sans-serif;
 }
@@ -27,14 +27,14 @@ header {
 }
 
 .header-image {
-    background: url('assets/au-raw_logo_640.png') no-repeat;
+    background: url('../asset/assets/au-raw_logo_640.png') no-repeat;
     max-width: auto;
     height: 214px;
 }
 
 @media (min-width: 1000px) {
     .header-image {
-      background: url('assets/logo-6-inv.png') no-repeat;
+      background: url('../asset/assets/logo-6-inv.png') no-repeat;
       height: 315px;
       width: auto;
     }
