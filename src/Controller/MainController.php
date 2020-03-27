@@ -44,4 +44,13 @@ class MainController extends AbstractController
         return $this->render('main\faq.html.twig', [
         ]);
     }
+
+    /**
+     * @Route("/delivery", name="delivery")
+     */
+    public function delivery()
+    {
+        return $this->render('main\delivery.html.twig', [
+        ]);
+    }
 }
