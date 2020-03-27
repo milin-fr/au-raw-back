@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Contact us{% endblock %}
+
+{% block body %}
+
+<div class="form__picture">
+            <img src="{{ asset('asset/assets/Product-pictures/gluten-free.png') }}" alt="beatuiful picture">
+
+            <div class="form__container">
+                <form action="" method="get">
+                    <p>
+                        <label for="your-name">Your Name</label></p>
+                    <input type="text" id="your-name" name="name" placeholder="How do we address you?">
+                    </p>
+                <br>
+                <p><label for="your-email">Your Email <section id="asterisk">Please choose the contact method that is the most convenient for <strong>you</strong>!</label></section></label></p>
+                    <input type="email" id="your-email" name="email" placeholder="e.g. sarah@gmail.com">
+                </p>
+                <p>or</p>
+                <p><label for="your-phone">Your Phone Number <section id="asterisk">Please choose the contact method that is the most convenient for <strong>you</strong>!</label></section>
+                    <input type="tel" id="your-phone" name="phone" placeholder="06 01 00 00 00">
+                </p>
+                <br>
+                <p><label for="your-message">Your Message</label></p>
+                    <textarea rows="8" cols="50" name = "msg" id="your-message" placeholder="Would you like to order something? Do you need our advice?"></textarea>
+                </p>
+                <p><input type="submit" value="Send us a message!">
+                </p>
+            </form>
+            </div>
+            </div>
+
+{% endblock %}
