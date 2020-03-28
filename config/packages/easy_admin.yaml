@@ -1,9 +1,49 @@
 easy_admin:
     entities:
-        # List the entity class name you want to manage
-        - App\Entity\Allergen
-        - App\Entity\Ingredient
-        - App\Entity\Picture
-        - App\Entity\Product
-        - App\Entity\Tag
-        - App\Entity\Unit
+        Allergen:
+            class: App\Entity\Allergen
+            form:
+                fields:
+                - {property: 'title'}
+                - {property: 'archived'}
+                - {property: 'products'}
+
+        Ingredient:
+            class: App\Entity\Ingredient
+            form:
+                fields:
+                - {property: 'title'}
+                - {property: 'archived'}
+                - {property: 'products'}
+
+        Picture:
+            class: App\Entity\Picture
+            form:
+                fields:
+                - {property: 'alt'}
+                - {property: 'archived'}
+                - {property: 'img_source'}
+                - {property: 'products'}
+
+        Product:
+            class: App\Entity\Product
+            form:
+                fields:
+                - {property: 'title'}
+                - {property: 'archived'}
+
+        Tag:
+            class: App\Entity\Tag
+            form:
+                fields:
+                - {property: 'title'}
+                - {property: 'archived'}
+                - {property: 'products'}
+
+        Unit:
+            class: App\Entity\Unit
+            form:
+                fields:
+                - {property: 'title'}
+                - {property: 'archived'}
+                - {property: 'products'}
