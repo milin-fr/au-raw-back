@@ -36,7 +36,7 @@
 
 <div class="bottom-part__container">
 {% for product in products %}
-    <div class="product">
+    <a href="{{ path('product', {'id': product.id}) }}" class="product">
         <div class="product-item">
             <img src="{{ asset('asset/assets/Product-pictures/strawberry-shortcake-bars-update.jpg') }}" atl="no nuts desserts selection">
             <div class="name">
@@ -47,7 +47,7 @@
                 <p class="product-price">{{ product.price }} &euro;</p>
             </div>
         </div>
-    </div>
+    </a>
 {% endfor %}
 </div>
 {% endblock %}
