@@ -78,6 +78,11 @@ class Product
      */
     private $allergens;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $type;
+
     public function __construct()
     {
         $this->tags = new ArrayCollection();
@@ -292,6 +297,18 @@ class Product
         if ($this->allergens->contains($allergen)) {
             $this->allergens->removeElement($allergen);
         }
+
+        return $this;
+    }
+
+    public function getType(): ?string
+    {
+        return $this->type;
+    }
+
+    public function setType(?string $type): self
+    {
+        $this->type = $type;
 
         return $this;
     }
