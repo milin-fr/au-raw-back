@@ -112,6 +112,8 @@ class AppFixtures extends Fixture
             "Minty Chocolate Truffles is an incredibly yummy product that you won't want to miss out on. It will make you feel like you're walking on cloud nine, and it's good for your body, too! You will absolutely love it, we totally promise you that! Check the allergens list, however, we really don't want you to die."
             ];
 
+        $types = ["cake", "chocolate"];
+
             for($i = 0; $i < 19; $i++){
                 $product = new Product();
                 $product->setTitle($product_title[$i]);
@@ -124,6 +126,11 @@ class AppFixtures extends Fixture
                     $product->addAllergen($allergens[$j]);
                     $product->addTag($tags[$j]);
                     $product->addIngredient($ingredients[$j]);
+                }
+                if($i < 11){
+                    $product->setType($types[0]);
+                }else{
+                    $product->setType($types[1]);
                 }
                 $product->setUnit($units[$i%5]);
                 $product->setCreatedAt(new \DateTime());
