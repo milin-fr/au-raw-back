@@ -448,9 +448,14 @@ footer a:hover {
 
 /***** PRODUCT *****/
 
-.product a {
+a.product {
     text-decoration: none;
     color: #d3cecb;
+    padding: 0.5rem;
+}
+
+a.product:hover {
+    background-color: #8D2D50;
 }
 
 .product__container {

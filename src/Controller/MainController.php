@@ -79,7 +79,7 @@ class MainController extends AbstractController
     public function cakes(ProductRepository $productRepository)
     {
         return $this->render('main\cakes.html.twig', [
-            'products' => $productRepository->findAll(),
+            'products' => $productRepository->findBy(['type' => 'cake']),
         ]);
     }
 
@@ -89,7 +89,7 @@ class MainController extends AbstractController
     public function chocolates(ProductRepository $productRepository)
     {
         return $this->render('main\chocolates.html.twig', [
-            'products' => $productRepository->findAll(),
+            'products' => $productRepository->findBy(['type' => 'chocolate']),
         ]);
     }
 
