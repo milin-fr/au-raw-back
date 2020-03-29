@@ -11,6 +11,10 @@ easy_admin:
             list:
                 actions:
                 - {name: 'edit', icon: 'pencil', label: false, css_class: 'btn btn-secondary'}
+                - {name: '-delete'}
+            edit:
+                actions:
+                - {name: '-delete'}
 
         Ingredient:
             class: App\Entity\Ingredient
@@ -19,6 +23,13 @@ easy_admin:
                 - {property: 'title'}
                 - {property: 'enabled'}
                 - {property: 'products'}
+            list:
+                actions:
+                - {name: 'edit', icon: 'pencil', label: false, css_class: 'btn btn-secondary'}
+                - {name: '-delete'}
+            edit:
+                actions:
+                - {name: '-delete'}
 
         Picture:
             class: App\Entity\Picture
@@ -28,6 +39,13 @@ easy_admin:
                 - {property: 'enabled'}
                 - {property: 'img_source'}
                 - {property: 'products'}
+            list:
+                actions:
+                - {name: 'edit', icon: 'pencil', label: false, css_class: 'btn btn-secondary'}
+                - {name: '-delete'}
+            edit:
+                actions:
+                - {name: '-delete'}
 
         Product:
             class: App\Entity\Product
@@ -35,6 +53,13 @@ easy_admin:
                 fields:
                 - {property: 'title'}
                 - {property: 'enabled'}
+            list:
+                actions:
+                - {name: 'edit', icon: 'pencil', label: false, css_class: 'btn btn-secondary'}
+                - {name: '-delete'}
+            edit:
+                actions:
+                - {name: '-delete'}
 
         Tag:
             class: App\Entity\Tag
@@ -43,6 +68,13 @@ easy_admin:
                 - {property: 'title'}
                 - {property: 'enabled'}
                 - {property: 'products'}
+            list:
+                actions:
+                - {name: 'edit', icon: 'pencil', label: false, css_class: 'btn btn-secondary'}
+                - {name: '-delete'}
+            edit:
+                actions:
+                - {name: '-delete'}
 
         Unit:
             class: App\Entity\Unit
@@ -50,3 +82,10 @@ easy_admin:
                 fields:
                 - {property: 'title'}
                 - {property: 'enabled'}
+            list:
+                actions:
+                - {name: 'edit', icon: 'pencil', label: false, css_class: 'btn btn-secondary'}
+                - {name: '-delete'}
+            edit:
+                actions:
+                - {name: '-delete'}
