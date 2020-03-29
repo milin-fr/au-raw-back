@@ -24,11 +24,6 @@ class Allergen
     private $title;
 
     /**
-     * @ORM\Column(type="smallint", nullable=true)
-     */
-    private $archived;
-
-    /**
      * @ORM\Column(type="datetime", nullable=true)
      */
     private $created_at;
@@ -42,6 +37,11 @@ class Allergen
      * @ORM\ManyToMany(targetEntity="App\Entity\Product", mappedBy="allergens")
      */
     private $products;
+
+    /**
+     * @ORM\Column(type="boolean", nullable=true)
+     */
+    private $enabled;
 
     public function __construct()
     {
@@ -61,18 +61,6 @@ class Allergen
     public function setTitle(?string $title): self
     {
         $this->title = $title;
-
-        return $this;
-    }
-
-    public function getArchived(): ?int
-    {
-        return $this->archived;
-    }
-
-    public function setArchived(?int $archived): self
-    {
-        $this->archived = $archived;
 
         return $this;
     }
@@ -132,5 +120,17 @@ class Allergen
     public function __toString()
     {
         return $this->title;
+    }
+
+    public function getEnabled(): ?bool
+    {
+        return $this->enabled;
+    }
+
+    public function setEnabled(?bool $enabled): self
+    {
+        $this->enabled = $enabled;
+
+        return $this;
     }
 }

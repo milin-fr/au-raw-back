@@ -1,19 +1,23 @@
 easy_admin:
+    site_name: '<em style="color: #f0f">Au raw admin</em>'
     entities:
         Allergen:
             class: App\Entity\Allergen
             form:
                 fields:
                 - {property: 'title'}
-                - {property: 'archived'}
+                - {property: 'enabled'}
                 - {property: 'products'}
+            list:
+                actions:
+                - {name: 'edit', icon: 'pencil', label: false, css_class: 'btn btn-secondary'}
 
         Ingredient:
             class: App\Entity\Ingredient
             form:
                 fields:
                 - {property: 'title'}
-                - {property: 'archived'}
+                - {property: 'enabled'}
                 - {property: 'products'}
 
         Picture:
@@ -21,7 +25,7 @@ easy_admin:
             form:
                 fields:
                 - {property: 'alt'}
-                - {property: 'archived'}
+                - {property: 'enabled'}
                 - {property: 'img_source'}
                 - {property: 'products'}
 
@@ -30,14 +34,14 @@ easy_admin:
             form:
                 fields:
                 - {property: 'title'}
-                - {property: 'archived'}
+                - {property: 'enabled'}
 
         Tag:
             class: App\Entity\Tag
             form:
                 fields:
                 - {property: 'title'}
-                - {property: 'archived'}
+                - {property: 'enabled'}
                 - {property: 'products'}
 
         Unit:
@@ -45,5 +49,4 @@ easy_admin:
             form:
                 fields:
                 - {property: 'title'}
-                - {property: 'archived'}
-                - {property: 'products'}
+                - {property: 'enabled'}

@@ -22,9 +22,9 @@ class Unit
     private $title;
 
     /**
-     * @ORM\Column(type="smallint", nullable=true)
+     * @ORM\Column(type="boolean", nullable=true)
      */
-    private $archived;
+    private $enabled;
 
     /**
      * @ORM\Column(type="datetime", nullable=true)
@@ -53,14 +53,14 @@ class Unit
         return $this;
     }
 
-    public function getArchived(): ?int
+    public function getEnabled(): ?bool
     {
-        return $this->archived;
+        return $this->enabled;
     }
 
-    public function setArchived(?int $archived): self
+    public function setEnabled(?bool $enabled): self
     {
-        $this->archived = $archived;
+        $this->enabled = $enabled;
 
         return $this;
     }

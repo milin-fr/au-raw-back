@@ -23,7 +23,7 @@ class AppFixtures extends Fixture
             $allergen = new Allergen();
             $allergen->setTitle($title);
             $allergen->setCreatedAt(new \DateTime());
-            $allergen->setArchived(0);
+            $allergen->setEnabled(1);
             $manager->persist($allergen);
             $allergens[] = $allergen;
         }
@@ -37,7 +37,7 @@ class AppFixtures extends Fixture
             $tag = new Tag();
             $tag->setTitle($title);
             $tag->setCreatedAt(new \DateTime());
-            $tag->setArchived(0);
+            $tag->setEnabled(1);
             $manager->persist($tag);
             $tags[] = $tag;
         }
@@ -49,7 +49,7 @@ class AppFixtures extends Fixture
             $ingredient = new Ingredient();
             $ingredient->setTitle($title);
             $ingredient->setCreatedAt(new \DateTime());
-            $ingredient->setArchived(0);
+            $ingredient->setEnabled(1);
             $manager->persist($ingredient);
             $ingredients[] = $ingredient;
         }
@@ -61,7 +61,7 @@ class AppFixtures extends Fixture
             $unit = new Unit();
             $unit->setTitle($title);
             $unit->setCreatedAt(new \DateTime());
-            $unit->setArchived(0);
+            $unit->setEnabled(1);
             $manager->persist($unit);
             $units[] = $unit;
         }
@@ -134,7 +134,7 @@ class AppFixtures extends Fixture
                 }
                 $product->setUnit($units[$i%5]);
                 $product->setCreatedAt(new \DateTime());
-                $product->setArchived(0);
+                $product->setEnabled(1);
                 $product->setPrice(random_int(10 , 20));
                 $manager->persist($product);
             }
