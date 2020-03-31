@@ -53,10 +53,14 @@ easy_admin:
                 fields:
                 - {property: 'title'}
                 - {property: 'enabled'}
+                - { property: 'imageFile', type: 'file' }
             list:
                 actions:
                 - {name: 'edit', icon: 'pencil', label: false, css_class: 'btn btn-secondary'}
                 - {name: '-delete'}
+                fields:
+                - { property: 'title' }
+                - { property: 'image', type: 'image', base_path: '.%app.path.product_images%' }
             edit:
                 actions:
                 - {name: '-delete'}
