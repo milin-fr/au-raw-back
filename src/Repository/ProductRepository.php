@@ -47,4 +47,16 @@ class ProductRepository extends ServiceEntityRepository
         ;
     }
     */
+
+    public function findByProductType($type)
+    {
+        return $this->createQueryBuilder('p')
+            ->andWhere('p.type = :val')
+            ->andWhere('p.enabled = 1')
+            ->setParameter('val', $type)
+            ->orderBy('p.created_at', 'DESC')
+            ->getQuery()
+            ->getResult()
+        ;
+    }
 }

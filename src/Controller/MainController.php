@@ -16,9 +16,8 @@ class MainController extends AbstractController
     {
         return $this->render('main\home.html.twig', [
             'products' => $productRepository->findBy(
-                [
-                    'enabled' => 'true'
-                ]
+                ['enabled' => 'true'],
+                ['updated_at' => 'DESC']
             ),
         ]);
     }
@@ -83,7 +82,7 @@ class MainController extends AbstractController
     public function cakes(ProductRepository $productRepository)
     {
         return $this->render('main\cakes.html.twig', [
-            'products' => $productRepository->findBy(['type' => 'cake']),
+            'products' => $productRepository->findByProductType('cake'),
         ]);
     }
 
@@ -93,7 +92,7 @@ class MainController extends AbstractController
     public function chocolates(ProductRepository $productRepository)
     {
         return $this->render('main\chocolates.html.twig', [
-            'products' => $productRepository->findBy(['type' => 'chocolate']),
+            'products' => $productRepository->findByProductType('chocolate'),
         ]);
     }
 
