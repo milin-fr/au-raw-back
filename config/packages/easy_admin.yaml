@@ -52,7 +52,15 @@ easy_admin:
             form:
                 fields:
                 - {property: 'title'}
+                - {property: 'short_description'}
+                - {property: 'long_description'}
+                - {property: 'price'}
+                - {property: 'unit'}
                 - {property: 'enabled'}
+                - {property: 'allergens'}
+                - {property: 'ingredients'}
+                - {property: 'tags'}
+                - { property: 'iconFile', type: 'file' }
                 - { property: 'imageFile', type: 'file' }
             list:
                 actions:
@@ -60,6 +68,8 @@ easy_admin:
                 - {name: '-delete'}
                 fields:
                 - { property: 'title' }
+                - { property: 'enabled' }
+                - { property: 'icon', type: 'image', base_path: '.%app.path.product_images%' }
                 - { property: 'image', type: 'image', base_path: '.%app.path.product_images%' }
             edit:
                 actions:

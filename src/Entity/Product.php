@@ -45,7 +45,7 @@ class Product
     /**
      * @ORM\Column(type="smallint", nullable=true)
      * @Assert\NotBlank
-     * @Assert\Currency
+     * @Assert\PositiveOrZero
      */
     private $price;
 
@@ -73,6 +73,18 @@ class Product
      * @ORM\OneToMany(targetEntity="App\Entity\Picture", mappedBy="product")
      */
     private $pictures;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     * @var string
+     */
+    private $icon;
+
+    /**
+     * @Vich\UploadableField(mapping="product_icons", fileNameProperty="icon")
+     * @var File
+     */
+    private $iconFile;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
@@ -288,6 +300,34 @@ class Product
     public function getImage()
     {
         return $this->image;
+    }
+
+    public function setIconFile(File $icon = null)
+    {
+        $this->iconFile = $icon;
+
+        // VERY IMPORTANT:
+        // It is required that at least one field changes if you are using Doctrine,
+        // otherwise the event listeners won't be called and the file is lost
+        if ($icon) {
+            // if 'updatedAt' is not defined in your entity, use another property
+            $this->updated_at = new \DateTime();
+        }
+    }
+
+    public function getIconFile()
+    {
+        return $this->iconFile;
+    }
+
+    public function setIcon($icon)
+    {
+        $this->icon = $icon;
+    }
+
+    public function getIcon()
+    {
+        return $this->icon;
     }
 
     /**
