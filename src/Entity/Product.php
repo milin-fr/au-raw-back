@@ -7,6 +7,7 @@ use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\HttpFoundation\File\File;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\ProductRepository")
@@ -23,6 +24,11 @@ class Product
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
+     * @Assert\NotBlank
+     * @Assert\Length(
+     *      max = 255,
+     *      allowEmptyString = false
+     * )
      */
     private $title;
 
@@ -38,6 +44,8 @@ class Product
 
     /**
      * @ORM\Column(type="smallint", nullable=true)
+     * @Assert\NotBlank
+     * @Assert\Currency
      */
     private $price;
 
