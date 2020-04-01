@@ -15,7 +15,11 @@ class MainController extends AbstractController
     public function home(ProductRepository $productRepository)
     {
         return $this->render('main\home.html.twig', [
-            'products' => $productRepository->findAll(),
+            'products' => $productRepository->findBy(
+                [
+                    'enabled' => 'true'
+                ]
+            ),
         ]);
     }
 
