@@ -12,6 +12,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 /**
  * @ORM\Entity(repositoryClass="App\Repository\ProductRepository")
  * @Vich\Uploadable
+ * @ORM\HasLifecycleCallbacks()
  */
 class Product
 {
@@ -125,7 +126,6 @@ class Product
         $this->pictures = new ArrayCollection();
         $this->ingredients = new ArrayCollection();
         $this->allergens = new ArrayCollection();
-        $this->created_at = new \DateTime();
     }
 
     public function getId(): ?int
@@ -409,5 +409,21 @@ class Product
     public function __toString()
     {
         return $this->title;
+    }
+
+    /** 
+     * @ORM\PrePersist
+     */
+    public function generateCreatedAt()
+    {
+        $this->created_at = new \DateTime();
+    }
+
+    /** 
+     * @ORM\PreUpdate
+     */
+    public function generateUpdatedAt()
+    {
+        $this->updated_at = new \DateTime();
     }
 }

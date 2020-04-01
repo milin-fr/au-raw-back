@@ -9,6 +9,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\AllergenRepository")
+ * @ORM\HasLifecycleCallbacks()
  */
 class Allergen
 {
@@ -138,5 +139,21 @@ class Allergen
         $this->enabled = $enabled;
 
         return $this;
+    }
+
+    /** 
+     * @ORM\PrePersist
+     */
+    public function generateCreatedAt()
+    {
+        $this->created_at = new \DateTime();
+    }
+
+    /** 
+     * @ORM\PreUpdate
+     */
+    public function generateUpdatedAt()
+    {
+        $this->updated_at = new \DateTime();
     }
 }
