@@ -28,7 +28,7 @@
                             </ul>
                         </div>
                         <div class="product-details">
-                        <p id="product-price">{{ product.price }} &euro;</p><em> {{ product.unit.title }}</em>
+                            <p class="product-price">{{ product.priceEuro }}<sup>{{ product.priceCentime }}</sup> &euro;</p><em> {{ product.unit.title }}</em>
                         </div>
                     </div>
                     <div class="order"><h4>You can order this product by <a href="{{ path('contact_us') }}">sending us a message</a>, giving us a call, or dropping by our shop in Paris!</h4>

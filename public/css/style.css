@@ -448,6 +448,11 @@ footer a:hover {
 
 /***** PRODUCT *****/
 
+sup
+{
+    font-size: 0.5em;
+}
+
 a.product {
     text-decoration: none;
     color: #d3cecb;

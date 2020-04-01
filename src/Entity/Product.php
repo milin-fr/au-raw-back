@@ -48,7 +48,25 @@ class Product
      * @Assert\NotBlank
      * @Assert\PositiveOrZero
      */
-    private $price;
+    private $price_euro;
+
+    /**
+     * @ORM\Column(type="smallint", nullable=true)
+     * @Assert\Range(
+     *      max = 99,
+     * )
+     * @Assert\PositiveOrZero
+     */
+    private $price_centime;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     * @Assert\Length(
+     *      max = 255,
+     *      allowEmptyString = false
+     * )
+     */
+    private $img_alt;
 
     /**
      * @ORM\Column(type="boolean", nullable=true)
@@ -165,18 +183,6 @@ class Product
     public function setLongDescription(?string $long_description): self
     {
         $this->long_description = $long_description;
-
-        return $this;
-    }
-
-    public function getPrice(): ?int
-    {
-        return $this->price;
-    }
-
-    public function setPrice(?int $price): self
-    {
-        $this->price = $price;
 
         return $this;
     }
@@ -417,6 +423,9 @@ class Product
     public function generateCreatedAt()
     {
         $this->created_at = new \DateTime();
+        if(empty($this->img_alt)){
+            $this->img_alt = $this->title . " image";
+        }
     }
 
     /** 
@@ -425,5 +434,44 @@ class Product
     public function generateUpdatedAt()
     {
         $this->updated_at = new \DateTime();
+        if(empty($this->img_alt)){
+            $this->img_alt = $this->title . " image";
+        }
+    }
+
+    public function getPriceEuro(): ?int
+    {
+        return $this->price_euro;
+    }
+
+    public function setPriceEuro(?int $price_euro): self
+    {
+        $this->price_euro = $price_euro;
+
+        return $this;
+    }
+
+    public function getPriceCentime(): ?int
+    {
+        return $this->price_centime;
+    }
+
+    public function setPriceCentime(?int $price_centime): self
+    {
+        $this->price_centime = $price_centime;
+
+        return $this;
+    }
+
+    public function getImgAlt(): ?string
+    {
+        return $this->img_alt;
+    }
+
+    public function setImgAlt(?string $img_alt): self
+    {
+        $this->img_alt = $img_alt;
+
+        return $this;
     }
 }

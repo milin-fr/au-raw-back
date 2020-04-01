@@ -20,13 +20,13 @@
     {% for product in products %}
         <a href="{{ path('product', {'id': product.id}) }}" class="product">
             <div class="product-item">
-                <img src="{{ asset('asset/assets/Product-pictures/strawberry-shortcake-bars-update.jpg') }}" atl="no nuts desserts selection">
+                <img src="{{ asset('uploads/images/products/'~ product.icon) }}" atl="no nuts desserts selection">
                 <div class="name">
                     <h1>{{ product.title }}</h1>
                 </div>
                 <div class="description">
                     <p class="product-description">{{ product.shortDescription }}</p>
-                    <p class="product-price">{{ product.price }} &euro;</p>
+                    <p class="product-price">{{ product.priceEuro }}<sup>{{ product.priceCentime }}</sup> &euro;</p>
                 </div>
             </div>
         </a>

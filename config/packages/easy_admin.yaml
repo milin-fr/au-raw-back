@@ -65,7 +65,8 @@ easy_admin:
                 - {property: 'title'}
                 - {property: 'short_description'}
                 - {property: 'long_description'}
-                - {property: 'price'}
+                - {property: 'price_euro'}
+                - {property: 'price_centime'}
                 - {property: 'unit'}
                 - {property: 'enabled'}
                 - {property: 'allergens'}
@@ -82,6 +83,8 @@ easy_admin:
                 - { property: 'enabled' }
                 - {property: 'created_at'}
                 - {property: 'updated_at'}
+                - {property: 'price_euro'}
+                - {property: 'price_centime'}
                 - { property: 'icon', type: 'image', base_path: '.%app.path.product_images%' }
                 - { property: 'image', type: 'image', base_path: '.%app.path.product_images%' }
             edit:
