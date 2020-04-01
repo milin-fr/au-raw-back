@@ -38,7 +38,7 @@
 {% for product in products %}
     <a href="{{ path('product', {'id': product.id}) }}" class="product">
         <div class="product-item">
-            <img src="{{ asset('uploads/images/products/'~ product.icon) }}" atl="no nuts desserts selection">
+            <img src="{{ asset('uploads/images/products/'~ product.icon) }}" atl="{{ product.imgAlt }}">
             <div class="name">
                 <h1>{{ product.title }}</h1>
             </div>

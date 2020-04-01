@@ -7,7 +7,7 @@
 <div class="product__container">
             <div class="product__top">
                 <div class="product-image">
-                    <img src="{{ asset('uploads/images/products/'~ product.image) }}">
+                    <img src="{{ asset('uploads/images/products/'~ product.image) }}" atl="{{ product.imgAlt }}">
                 </div>
                 <div class="product-info">
                     <h1>{{ product.title }}</h1>

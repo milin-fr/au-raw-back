@@ -90,6 +90,8 @@ easy_admin:
             edit:
                 actions:
                 - {name: '-delete'}
+                fields:
+                - { property: 'img_alt' }
 
         Tag:
             class: App\Entity\Tag
