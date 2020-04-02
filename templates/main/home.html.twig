@@ -72,6 +72,12 @@
 </div>
 
 <div class="bottom-part__container">
+<div class="selection-description">
+                <h1>The Best of Our Desserts</h1>
+                <p>The marriage of freshest fruit, berries, and nuts gave birth to these wonderfully fresh and healthy desserts. Made with love and passion, they will certainly bring you joy!</p>
+                <p>You can order them by sending us a message, giving us a call, or simply by dropping by our shop in Paris. We will be happy to answer all and any of your questions and guide you down the path of naturally good desserts!</p>
+            </div>
+        
 {% for product in products %}
     <a href="{{ path('product', {'id': product.id}) }}" class="product">
         <div class="product-item">
@@ -81,8 +87,8 @@
             </div>
             <div class="description">
                 <p class="product-description">{{ product.shortDescription }}</p>
-                <p class="product-price">{{ product.priceEuro }}<sup>{{ product.priceCentime }}</sup> &euro;</p>
             </div>
+                <p class="product-price">{{ product.priceEuro }}<sup>{{ product.priceCentime }}</sup> &euro;</p>
         </div>
     </a>
 {% endfor %}
