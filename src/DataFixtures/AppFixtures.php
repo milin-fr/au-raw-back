@@ -135,7 +135,8 @@ class AppFixtures extends Fixture
                 $product->setUnit($units[$i%5]);
                 $product->setCreatedAt(new \DateTime());
                 $product->setEnabled(1);
-                $product->setPrice(random_int(10 , 20));
+                $product->setPriceEuro(random_int(10 , 20));
+                $product->setPriceCentime(random_int(0 , 99));
                 $manager->persist($product);
             }
         $manager->flush();
