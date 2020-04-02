@@ -17,6 +17,7 @@
                         }
                     })
                     }}
+            {{ form_errors(form.name) }}
             </p>
             <p>
             {{ form_label(form.email, 'Your Email') }}
@@ -27,6 +28,7 @@
                         }
                     })
                     }}
+            {{ form_errors(form.email) }}
             </p>
             <p>
             {{ form_label(form.phone_number, 'Your Phone Number') }}
@@ -36,6 +38,7 @@
                         'placeholder': '06 01 00 00 00',
                         }
                     }) }}
+            {{ form_errors(form.phone_number) }}
             </p>
             <p>
             {{ form_label(form.text, 'Your Message') }}
