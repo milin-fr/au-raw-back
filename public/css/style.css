@@ -179,7 +179,8 @@ input[type=text], input[type=tel], input[type=email], select, textarea {
         
 }
 
-input[type=submit] {
+button {
+    cursor: pointer;
     background-color: #3e6d37;
     color: #DFEBFB;
     font-weight: bold;
@@ -196,11 +197,11 @@ input[type=submit] {
     resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
 }
 
-input[type=submit]:hover {
+button:hover {
     background: #57994d;
 }
 
-input[type=submit]:active {
+button:active {
     
     transform: translateY(2px);
   }

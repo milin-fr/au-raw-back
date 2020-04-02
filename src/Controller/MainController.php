@@ -33,15 +33,6 @@ class MainController extends AbstractController
     }
 
     /**
-     * @Route("/contact-us", name="contact_us")
-     */
-    public function contact_us()
-    {
-        return $this->render('main\contact-us.html.twig', [
-        ]);
-    }
-
-    /**
      * @Route("/faq", name="faq")
      */
     public function faq()
