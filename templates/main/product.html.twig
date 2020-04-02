@@ -14,7 +14,7 @@
                     <div class="product-tags">
                     <ul class="tags">
                         {% for tag in product.tags %}
-                            <li><a href="#" class="tag">{{ tag.title }}</a></li>
+                            <li><a href="{{ path('products_by_tag', {'id': tag.id}) }}" class="tag">{{ tag.title }}</a></li>
                         {% endfor %}
                     </ul>
                     <div class="product-ingr">

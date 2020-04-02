@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ tag.title }} products{% endblock %}
+
+{% block body %}
+<div class="top-part__container">
+<h1>{{ tag.title }} products</h1>
+</div>
+<div class="bottom-part__container">
+{% for product in tag.products %}
+    {% if product.enabled == true %}
+        <a href="{{ path('product', {'id': product.id}) }}" class="product">
+            <div class="product-item">
+                <img src="{{ asset('uploads/images/products/'~ product.icon) }}" atl="{{ product.imgAlt }}">
+                <div class="name">
+                    <h1>{{ product.title }}</h1>
+                </div>
+                <div class="description">
+                    <p class="product-description">{{ product.shortDescription }}</p>
+                    <p class="product-price">{{ product.priceEuro }}<sup>{{ product.priceCentime }}</sup> &euro;</p>
+                </div>
+            </div>
+        </a>
+    {% endif %}
+{% endfor %}
+</div>
+{% endblock %}

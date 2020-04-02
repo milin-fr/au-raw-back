@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Product;
 use App\Repository\ProductRepository;
+use App\Repository\TagRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -103,6 +104,16 @@ class MainController extends AbstractController
     {
         return $this->render('main\product.html.twig', [
             'product' => $product,
+        ]);
+    }
+
+    /**
+     * @Route("/product/tag/{id<\d+>}", name="products_by_tag")
+     */
+    public function productsByTag($id, TagRepository $tagRepository)
+    {
+        return $this->render('main\products_by_tag.html.twig', [
+            'tag' => $tagRepository->find($id),
         ]);
     }
 }
