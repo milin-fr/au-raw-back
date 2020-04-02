@@ -16,5 +16,4 @@
 ###< symfony/phpunit-bridge ###
 
 /public/asset
-*.png
-*.jpg
+/public/uploads/images/products
