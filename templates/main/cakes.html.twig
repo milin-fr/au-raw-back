@@ -5,14 +5,48 @@
 {% block body %}
 
         <div class="top-part__container">
-            <div id="product-carousel">
-                <img src="{{ asset('asset/assets/Product-pictures/maxresdefault.jpg') }}" alt="promotional product">
-                <div class="description">
-                    <p id="promo-desc"><< Promo Carousel PH >></p>
-                </div>
-            </div>
-            
+             <div id="promo-cakes">
+               <!-- Slideshow container -->
+                <div class="slideshow-container">
+
+                    <!-- Full-width images with number and caption text -->
                 
+                    <div class="mySlides fade">
+                        <div class="numbertext">1 / 4</div>
+                            <img src="{{ asset('static_pics/Carousel/17_icon.png') }}">
+                        <div class="text">Chocolate Raspberry Bites</div>
+                    </div>
+                
+                    <div class="mySlides fade">
+                        <div class="numbertext">2 / 4</div>
+                            <img src="{{ asset('static_pics/Carousel/19_icon.png') }}">
+                        <div class="text">Chocolate Pistachio Truffles</div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">3 / 4</div>
+                            <img src="{{ asset('static_pics/Carousel/3_icon.png') }}">
+                        <div class="text">Light Creamy Cupcake</div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">4 / 4</div>
+                            <img src="{{ asset('static_pics/Carousel/7_icon.png') }}">
+                        <div class="text">Plum Seed Bites</div>
+                    </div>
+                    <!-- Next and previous buttons -->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+                
+                <!-- The dots/circles -->
+                <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                </div>
+            </div> 
         </div>
        
 <div class="bottom-part__container">
