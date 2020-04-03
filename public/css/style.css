@@ -28,16 +28,10 @@ header {
 }
 
 .header-image {
-<<<<<<< HEAD
     background: url('../static_pics/logo-1000.png') no-repeat;
     max-width: 100%;
     height: 279px;
     object-fit: fill;
-=======
-    background: url('../static_pics/au-raw_logo_640.png') no-repeat;
-    max-width: auto;
-    height: 214px;
->>>>>>> master
 }
 
 @media (min-width: 2000px) {
@@ -69,16 +63,10 @@ header {
 
   @media (max-width: 600px) {
     .header-image {
-<<<<<<< HEAD
       background: url('../static_pics/logo-400.png') no-repeat;
       max-width: 100vw;
       height: 157px;
       object-fit: cover;
-=======
-      background: url('../static_pics/logo-6-inv.png') no-repeat;
-      height: 315px;
-      width: auto;
->>>>>>> master
     }
   }
 
