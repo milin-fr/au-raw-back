@@ -376,7 +376,6 @@ footer a:hover {
     #sections {
         visibility: hidden;
     }
-
   }
 
 .sections__tiles {
@@ -391,8 +390,16 @@ footer a:hover {
 #sections img {
     width: 100%;
     height: 9em;
-    object-fit: none;
+    object-fit: cover;
 }
+
+@media (max-width: 1200px) {
+    #sections img {
+        width: 100%;
+        height: 9em;
+        object-fit: fill;
+    }
+  }
 
 /**************** END OF THE TOP PART  *****************/
 
