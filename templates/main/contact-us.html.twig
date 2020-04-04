@@ -51,6 +51,7 @@
                         }
                     })
                     }}
+            {{ form_errors(form.text) }}
             </p>
             <button class="btn">{{ button_label|default('Send us a message!') }}</button>
         {{ form_end(form) }}
