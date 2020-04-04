@@ -131,3 +131,28 @@ easy_admin:
             edit:
                 actions:
                 - {name: '-delete'}
+
+        Contact:
+            class: App\Entity\Contact
+            disabled_actions: ['new']
+            list:
+                actions:
+                - {name: 'show'}
+                - {name: '-edit'}
+                - {name: '-delete'}
+                fields:
+                - {property: 'created_at'}
+                - {property: 'name'}
+                - {property: 'email'}
+                - {property: 'phone_number'}
+                - {property: 'text'}
+            show:
+                fields:
+                - {property: 'created_at'}
+                - {property: 'name'}
+                - {property: 'email'}
+                - {property: 'phone_number'}
+                - {property: 'text'}
+                actions:
+                - {name: '-edit'}
+                - {name: 'delete', icon: 'trash', label: false, css_class: 'btn btn-danger'}
