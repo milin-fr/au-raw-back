@@ -36,11 +36,15 @@
             <div id="sections">
                 <div class="sections__tiles">
                     <div id="selection gluten-free">
-                        <img src="{{ asset('static_pics/gluten-free-small12345.png') }}" alt="gluten-free desserts selection">
+                        <a href="{{ path('products_by_tag', {'id': 4}) }}">
+                            <img src="{{ asset('static_pics/gluten-free-small12345.png') }}" alt="gluten-free desserts selection">
+                        </a>
                     </div>
                     
                     <div id="selection nuts-free">
-                        <img src="{{ asset('static_pics/nuts-free-small122345.png') }}" atl="no nuts desserts selection">
+                        <a href="{{ path('products_by_tag', {'id': 1}) }}">
+                            <img src="{{ asset('static_pics/nuts-free-small122345.png') }}" atl="no nuts desserts selection">
+                        </a>
                     </div>
 <!--
                     <div id="selection cocoa-free">
@@ -48,7 +52,9 @@
                     </div>
 -->
                     <div id="selection low-cal">
-                        <img src="{{ asset('static_pics/low-cal-small12345.png') }}" alt="low-calorie dessers selection">
+                        <a href="{{ path('products_by_tag', {'id': 2}) }}">
+                            <img src="{{ asset('static_pics/low-cal-small12345.png') }}" alt="low-calorie dessers selection">
+                        </a>
                     </div>
             </div>
         </div>
