@@ -38,12 +38,12 @@
                   </div>
                   -->
             </nav>
+        </header>   
             {% for message in app.flashes('success') %}
-              <div class="alert alert-success">
+              <div class="flash-success">
                   {{ message }}
               </div>
             {% endfor %}
-        </header>   
             <div class="main-part__container">
 
                 {% block body %}{% endblock %}

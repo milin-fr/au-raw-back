@@ -22,7 +22,7 @@
             <br>
             <p>
             {{ form_label(form.email, 'Your Email') }}
-            <section id="asterisk">Please choose the contact method that is the most convenient for <strong>you</strong>!</label></section>
+            <section id="asterisk">Please, provide at least your emailn so we can get back to you!</label></section>
             {{ form_widget(form.email, {
                         'attr': {
                         'placeholder': 'e.g. sarah@gmail.com',
@@ -31,10 +31,10 @@
                     }}
             {{ form_errors(form.email) }}
             </p>
-            <p>or</p>
+
             <p>
             {{ form_label(form.phone_number, 'Your Phone Number') }}
-            <section id="asterisk">Please choose the contact method that is the most convenient for <strong>you</strong>!</label></section>
+            <section id="asterisk">If you prefer us to call you, make sure to provide your phone number too!</label></section>
             {{ form_widget(form.phone_number, {
                         'attr': {
                         'placeholder': '06 01 00 00 00',
