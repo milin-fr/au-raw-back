@@ -88,6 +88,11 @@
         object-fit: fill;
       }
 
+      .form__container {
+        width: 92%;
+        padding: 20px;
+    }
+
     .page__container {
         position: absolute;
         top: 0;
