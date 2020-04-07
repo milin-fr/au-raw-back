@@ -46,6 +46,29 @@
         grid-column-gap: 0.2%;
         grid-row-gap: 1em;
     }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+        background-color: #dfebfb;
+        color: #0d3b06;
+    }
+    
+    footer ul {
+        width: 100%;
+        margin: 0 auto;
+        padding: 5px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        list-style: none;
+    }
+    
+    footer li {
+        padding: 3px;
+        text-align: center;
+    }
   }
 
 
@@ -69,6 +92,14 @@
         color: #0d3b06;
         margin-left: auto;
         margin-right: auto;
+    }
+
+    footer ul {
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+        grid-row: 33% 33% 33%;
+        grid-column-gap: 0.2%;
+        grid-row-gap: 1em;
     }
     
     .main-part__container {
