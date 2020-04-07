@@ -43,11 +43,7 @@ header {
     font-size: 1.5rem;
 }
 
-
-
- 
-
-  .main-part__container-row {
+.main-part__container-row {
     display: inline;
     flex-wrap: wrap;
     max-width: 100%;
