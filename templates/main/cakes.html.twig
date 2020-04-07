@@ -48,7 +48,7 @@
                 <div class="description">
                     <p class="product-description">{{ product.shortDescription }}</p>
                 </div>
-                    <p class="product-price">{{ product.priceEuro }}<sup>{{ product.priceCentime }}</sup> &euro;</p>
+                    <p class="product-price">{{ product.priceEuro }}<sup>{{ "%02d"|format(product.priceCentime) }}</sup> &euro; <em>/ {{ product.unit.title }}</em></p>
             </div>
         </a>
     {% endfor %}

@@ -394,6 +394,12 @@ footer a:hover {
     margin: auto 0;
 }
 
+.product-price em {
+    font-weight: normal;
+    font-size: small;
+    font-style: italic;
+}
+
 .product .name h1 {
     width: 100%;
     font-size: 1.4em;
