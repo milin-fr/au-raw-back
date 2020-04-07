@@ -15,6 +15,14 @@
       object-fit: cover;
     }
 
+    .form__picture img {
+        display: none;
+    }
+
+    .form__container {
+        width: 100%;
+    }
+
     #promo {
         width: 100%;
     }
@@ -79,6 +87,11 @@
         height: 157px;
         object-fit: fill;
       }
+
+      .form__container {
+        width: 92%;
+        padding: 20px;
+    }
 
     .page__container {
         position: absolute;
