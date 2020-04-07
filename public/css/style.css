@@ -493,6 +493,11 @@ a.product:hover {
     object-fit: cover;
 }
 
+.product-image > img:nth-child(2)
+{
+    display: none;
+}
+
 .product-info {
     width: 50%;
     float: right;
