@@ -60,7 +60,18 @@ header {
     color: #d3cecb;
 }
 
+/* errors */
 
+.error--404
+{
+    text-align: center;
+}
+
+.error--404 > a,
+.error--404 > a:visited
+{
+    color: #6bb360;
+}
 
 /********** NAVIGATION MENU and SEARCH BAR **********/
 
