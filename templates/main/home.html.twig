@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Au raw home{% endblock %}
+{% block title %}Au'raw - Home{% endblock %}
 
 {% block body %}
 <div class="top-part__container">
@@ -82,4 +82,8 @@
     </a>
 {% endfor %}
 </div>
+{% endblock %}
+
+{% block javascripts %}
+    <script type="text/javascript" src="{{ asset('js/carousel.js') }}"></script>
 {% endblock %}
